@@ -6,14 +6,25 @@ resource "aws_vpc" "this" {
   }
 }
 
-resource "aws_subnet" "this"{
+resource "aws_subnet" "public_1"{
   vpc_id = aws_vpc.this.id
-
-  cidr_block = var.subnet_cidr
-
+  cidr_block = var.subnet_1_cidr
+  availability_zone = var.subnet_1_az
   map_public_ip_on_launch = true
+  
   tags = {
-    Name = var.subnet_name
+    Name = var.subnet_1_name
+  }
+}
+
+resource "aws_subnet" "public_2" {
+  vpc_id = aws_vpc.this.id
+  cidr_block = var.subnet_2_cidr
+  availability_zone = var.subnet_2_az
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = var.subnet_2_name
   }
 }
 
@@ -40,7 +51,12 @@ resource "aws_route" "this" {
 }
 
 # Subnetと関連付け
-resource "aws_route_table_association" "this" {
-  subnet_id = aws_subnet.this.id
+resource "aws_route_table_association" "public_1" {
+  subnet_id = aws_subnet.public_1.id
+  route_table_id = aws_route_table.this.id
+}
+
+resource "aws_route_table_association" "public_2" {
+  subnet_id = aws_subnet.public_2.id
   route_table_id = aws_route_table.this.id
 }

@@ -1,5 +1,9 @@
-output "subnet_id" {
-  value = aws_subnet.this.id
+output "subnet_1_id" {
+  value = aws_subnet.public_1.id
+}
+
+output "subnet_2_id" {
+  value = aws_subnet.public_2.id
 }
 
 output "vpc_id" {
