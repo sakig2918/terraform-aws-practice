@@ -15,6 +15,10 @@ module "network"{
     subnet_2_cidr = "10.0.1.0/24"
     subnet_2_name = "public-subnet-2"
     subnet_2_az = "ap-northeast-1c"
+
+    private_subnet_1_cidr = "10.0.10.0/24"
+    private_subnet_1_name = "private-subnet-1"
+    private_subnet_1_az = "ap-northeast-1a"
 }
 
 module "compute" {
@@ -30,4 +34,8 @@ module "alb" {
   subnet_1_id = module.network.subnet_1_id
   subnet_2_id = module.network.subnet_2_id
   instance_id = module.compute.instance_id
+}
+
+output "alb_dns_name" {
+  value = module.alb.alb_dns_name
 }

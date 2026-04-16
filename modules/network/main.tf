@@ -28,6 +28,16 @@ resource "aws_subnet" "public_2" {
   }
 }
 
+resource "aws_subnet" "private_1" {
+  vpc_id = aws_vpc.this.id
+  cidr_block = var.private_subnet_1_cidr
+  availability_zone = var.private_subnet_1_az
+
+  tags = {
+    Name = var.private_subnet_1_name
+  }
+}
+
 resource "aws_internet_gateway" "this"{
  vpc_id = aws_vpc.this.id
 
