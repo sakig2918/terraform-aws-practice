@@ -35,8 +35,8 @@ resource "aws_instance" "this" {
   key_name = "test-ec2-key-1"
 
   user_data = <<-EOF
-              #bashで起動
               #!/bin/bash
+              bashで起動
 
               #httpd(Apache)をインストール
               dnf install -y httpd
@@ -47,7 +47,7 @@ resource "aws_instance" "this" {
               #再起動後も自動起動するよう設定
               systemctl enable httpd
 
-              #varファイル内にWebページ(index.html)を作成
+              #Apacheの公開ディレクトリにWebページ(index.html)を作成
               echo "Hello Terraform" > /var/www/html/index.html 
               EOF
               

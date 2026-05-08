@@ -1,0 +1,47 @@
+[33mcommit c3b2c1d5b2db979b357c6d2d24755a5cbb7edbe3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Thu Apr 16 10:25:00 2026 +0900
+
+    Update README.md
+
+[33mcommit b7dc426f3187b2ee4cbc40df53a9d0d67c6a36b0[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Thu Apr 16 10:24:25 2026 +0900
+
+    Update README.md
+
+[33mcommit df5aded945506f830ee84cd92f6205feb1bdcdd8[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Thu Apr 16 10:18:55 2026 +0900
+
+    Update README.md
+
+[33mcommit 1a5d8efdf8f5edc58db7f0dceb95e5a9d2e5f40f[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Mon Apr 13 23:12:53 2026 +0900
+
+    ALB追加
+
+[33mcommit 731b87e3853b5043634df51e633b309223837cd2[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Fri Apr 3 22:07:59 2026 +0900
+
+    Webサーバ公開対応 + gitignore追加
+
+[33mcommit f388af3a19f61dd88979df1217c6e30bdf01d814[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Fri Apr 3 21:57:03 2026 +0900
+
+    Update README.md
+
+[33mcommit 8a2e0ca2fed8834d80abd6ada39605e74de72d10[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Thu Apr 2 09:53:54 2026 +0900
+
+    Create README.md
+
+[33mcommit 59242f921ede8466274c092319bb41c5fb22529d[m
+Author: sakig2918 <sakig2918@gmail.com>
+Date:   Thu Apr 2 09:47:48 2026 +0900
+
+    initial commit

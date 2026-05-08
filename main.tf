@@ -23,7 +23,8 @@ module "network"{
 
 module "compute" {
   source = "./modules/compute"
-  subnet_id = module.network.subnet_1_id
+
+  subnet_id = module.network.private_subnet_1_id
   vpc_id = module.network.vpc_id
   instance_name = "test-ec2"
 }
