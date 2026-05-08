@@ -15,6 +15,7 @@ Internet→ALB→EC2(Apache)
 - EC2
 - ALB (Application Load Balancer)
 - Security Group
+- NAT Gateway
 
 ## 特徴
 - module分割（network / compute / alb）
@@ -33,6 +34,8 @@ Internet→ALB→EC2(Apache)
 - Target Group / Listenerの設定
 - EC2をターゲットとして登録
 - ネットワークを役割でpublicとprivateに分割
+- EC2をPrivate Subnet へ移動
+- NAT Gatewayを利用し、Private Subnet上のEC2から外向き通信を実現
 
 ## ALBの役割
 - ALBを使用することで、クライアントからのHTTPリクエストをEC2に転送する構成としました。直接EC2へアクセスさせるのではなくALBを経由させることで、可用性・拡張性・セキュリティの向上を意識しています。
@@ -49,6 +52,10 @@ Internet→ALB→EC2(Apache)
 - ALBのDNSを後で見られるようにしたのにできていない
 　- outputファイルの仕様を確認、ルートのmain.tfにもoutput記載
 　- 解決日: 2026/04/13
+
+- NAT Gateway構成作成時に、RouteとRoute Tableの関連付けを誤った
+　- RouteとRoute Talbeの違いを確認、Tabキーの補完機能使用時に注意する
+　- 解決日: 2026/4/27
 
 ## 今後やりたいこと
 - EC2をPrivate Subnetに移動 (外部非公開化)
